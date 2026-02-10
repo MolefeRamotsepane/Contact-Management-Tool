@@ -49,6 +49,20 @@ def view_contacts(contacts):
         print(f"Phone: {contact["phone"]}") # print the phone number of the contact
         print(f"Email: {contact["email"]}") # print the email address of the
 
+def update_contact(contacts):
+    name = input("Enter name to update: ") # prompt the user to enter a name to update
+    for contact in contacts: # iterate(loop) through each contact in the contacts list
+        if contact["name"].lower() == name.lower(): # Check if the name of the contact is equal to the entered name
+            new_phone = input("Enter new phone number: ") # prompt the user to enter a new phone number
+            new_email = input("Enter new email: ") # prompt the user to enter a new email address
+            contact["phone"] = new_phone # update the phone number of the contact
+            contact["email"] = new_email # update the email address of the contact
+            save_contacts(contacts) # save the updated contacts list to the file
+            print("Contact updated.") # print a message indicating that the contact is updated
+            return
+    print("Contact not found.") # if no contact with the entered name is found, print a message indicating that the contact is not found
+
+    
 def search_contacts(contacts):
     search_name = input("Enter name to seacrh: ") # prompt the user to enter a name to search for
     for contact in contacts: # iterate(loop) through each contact in the contacts list
