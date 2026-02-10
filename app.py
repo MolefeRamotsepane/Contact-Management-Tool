@@ -34,3 +34,22 @@ def add_contact(contacts):
 
     contacts.append(contact) # add the new contact to the contacts list
     save_contacts(contacts) # save the updated contacts list to the file
+
+def view_contacts(contacts):
+    if not contacts:
+        print("No contacts found.") # if the contacts list is empty, print a message indicating that no contacts are found
+        return
+    
+    for contact in contacts: # iterate(loop) through each contact in the contacts list
+        print(f"Name: {contact["name"]}") # print the name of the contact
+        print(f"Phone: {contact["phone"]}") # print the phone number of the contact
+        print(f"Email: {contact["email"]}") # print the email address of the
+
+def search_contacts(contacts):
+    search_name = input("Enter name to seacrh: ") # prompt the user to enter a name to search for
+    for contact in contacts: # iterate(loop) through each contact in the contacts list
+        if contact["name"].lower() == search_name.lower(): # check if the name of the contact is equal to the entered name
+            print("Conact found:") # if a contact with the entered name is found, print a message indicating that the contact is found
+            print(contact)
+            return
+    print("Contact not found.") # if no contact with the entered name is found, print a message indicating that the contact is not found
