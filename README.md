@@ -9,6 +9,7 @@ is meant for basic information storing proccesses
 - Continues usage until exit
 - Input validation
 - Error handling as well
+- Contacts are saved into a a json file in order to create persistancy
 
 ## How to run
 - Python 3 should be installed
