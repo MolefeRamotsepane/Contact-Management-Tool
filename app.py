@@ -22,9 +22,9 @@ def save_contacts(contacts): # contacts is a list of contact dictionaries that w
         json.dump(contacts, file, indent=4) # indent=4 is used for pretty-printing(indentation) the JSON data
 
 def add_contact(contacts):
-    name = input("Enter name: ") # prompt the user to enter a name
+    name = input("Enter full name: ") # prompt the user to enter a name
     phone = input("Enter phone number: ") # prompt the user to enter a phone number
-    email = input("Enter email: ") # prompt the user to enter an email address
+    email = input("Enter email address: ") # prompt the user to enter an email address
 
     contact = {
         "name": name, # store the entered name in the contact dictionary
@@ -48,9 +48,9 @@ def view_contacts(contacts):
         print("-----------------------------")
         print("Contact Details:")
         print("-----------------------------")
-        print(f"Name: {contact['name']}") # print the name of the contact
-        print(f"Phone: {contact['phone']}") # print the phone number of the contact
-        print(f"Email: {contact['email']}") # print the email address of the contact
+        print(f"Full Name: {contact['name']}") # print the name of the contact
+        print(f"Phone Number: {contact['phone']}") # print the phone number of the contact
+        print(f"Email Address: {contact['email']}") # print the email address of the contact
 
     
 def update_contact(contacts):
