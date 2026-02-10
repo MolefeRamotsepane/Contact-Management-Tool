@@ -45,10 +45,14 @@ def view_contacts(contacts):
         return
     
     for contact in contacts: # iterate(loop) through each contact in the contacts list
-        print(f"Name: {contact["name"]}") # print the name of the contact
-        print(f"Phone: {contact["phone"]}") # print the phone number of the contact
-        print(f"Email: {contact["email"]}") # print the email address of the
+        print("-----------------------------")
+        print("Contact Details:")
+        print("-----------------------------")
+        print(f"Name: {contact['name']}") # print the name of the contact
+        print(f"Phone: {contact['phone']}") # print the phone number of the contact
+        print(f"Email: {contact['email']}") # print the email address of the contact
 
+    
 def update_contact(contacts):
     name = input("Enter name to update: ") # prompt the user to enter a name to update
     for contact in contacts: # iterate(loop) through each contact in the contacts list
@@ -62,13 +66,18 @@ def update_contact(contacts):
             return
     print("Contact not found.") # if no contact with the entered name is found, print a message indicating that the contact is not found
 
-    
+
 def search_contacts(contacts):
     search_name = input("Enter name to seacrh: ") # prompt the user to enter a name to search for
     for contact in contacts: # iterate(loop) through each contact in the contacts list
         if contact["name"].lower() == search_name.lower(): # check if the name of the contact is equal to the entered name
             print("Conact found:") # if a contact with the entered name is found, print a message indicating that the contact is found
-            print(contact)
+            print("-----------------------------")
+            print("Search Result:")
+            print("-----------------------------")
+            print(f"Name: {contact['name']}")
+            print(f"Phone: {contact['phone']}") 
+            print(f"Email: {contact['email']}")
             return
     print("Contact not found.") # if no contact with the entered name is found, print a message indicating that the contact is not found
 
