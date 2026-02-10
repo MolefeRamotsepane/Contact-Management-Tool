@@ -1,0 +1,25 @@
+--- Job Request
+
+--- Client Request
+
+"We need a simple Contact Management Tool for our small business.
+
+Staff must be able to:
+
+- Add new contacts
+- View all contacts
+- Search for contact by name
+- Delete a contact
+
+"The contacts must be saved so that when the program closes and reopens,
+the data is still there"
+
+--- My goal
+
+Build a console-based contact Manager that:
+
+- Uses a file like (contacts.json or contacts.txt) to store data
+- Runs in a loop until user exits
+- Handles invalid inputs properly
+- Keeps data persistant which means saved even after the program closes
+
