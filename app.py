@@ -69,13 +69,14 @@ def update_contact(contacts):
 
 
 def search_contacts(contacts):
-    search_name = input("Enter name to seacrh: ") # prompt the user to enter a name to search for
+    search_name = input("Enter name to search: ") # prompt the user to enter a name to search for
+    print("-----------------------------")
+    print("Search Result:")
+    print("-----------------------------")
     for contact in contacts: # iterate(loop) through each contact in the contacts list
         if contact["name"].lower() == search_name.lower(): # check if the name of the contact is equal to the entered name
-            print("Conact found:") # if a contact with the entered name is found, print a message indicating that the contact is found
-            print("-----------------------------")
-            print("Search Result:")
-            print("-----------------------------")
+            print("Contact found") # if a contact with the entered name is found, print a message indicating that the contact is found
+            print("")
             print(f"Name: {contact['name']}")
             print(f"Phone: {contact['phone']}") 
             print(f"Email: {contact['email']}")
