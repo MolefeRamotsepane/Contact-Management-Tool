@@ -53,3 +53,16 @@ def search_contacts(contacts):
             print(contact)
             return
     print("Contact not found.") # if no contact with the entered name is found, print a message indicating that the contact is not found
+
+def delete_contact(contacts):
+    name = input("Enter name to delete: ") # prompt the user to enter a name to delete
+    for contact in contacts: # iterate(loop) through each contact in the contacts list
+        if contact["name"].lower() == name.lower(): # check if the name of the contact is equal to the entered name
+            contacts.remove(contact) # if a contact with the entered name is found, remove it from the contacts list
+            save_contacts(contacts) # save the updated contacts list to the file
+            print("Contact deleted.") # print a message indicating that the contact is deleted
+            return
+    print("Contact not found.") # if no contact with the entered name is found, print a message indicating that the contact is not found
+
+def main(): # main function that runs the program
+    contacts = load_contacts() # load contacts from the file
