@@ -13,3 +13,10 @@ def load_contacts():
             # which is then returned by this function
             return json.load(file)
     return [] # return an empty list if the file does not exist
+
+def save_contacts(contacts):
+    """Save contacts to the contacts.json file."""
+    # Open the contacts.json file in write(w) mode and save the contacts list as JSON data
+    with open(FILE_NAME, "w") as file:
+        # json.dump() will convert the python object (contacts) into a JSON formatted string and write it to the file
+        json.dump(contacts, file, indent=4) # indent=4 is used for pretty-printing(indentation) the JSON data
