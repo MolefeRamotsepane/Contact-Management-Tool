@@ -23,6 +23,6 @@ Enter email: ewrweoierw@outlook.com
 
 Results: Contact Saved
 
-Name: Molefe
-Phone: 0789654125
-Email: ewrweoierw@outlook.com
+Full Name: Molefe
+Phone Number: 0789654125
+Email Address: ewrweoierw@outlook.com
