@@ -32,6 +32,10 @@ def add_contact(contacts):
         "email": email # store the entered email address in the contact dictionary
     }
 
+    if any(c["name"].lower() == name.lower() for c in contacts): # check if a contact with the same name already exists in the contacts list
+        print("Contact with this name already exists. Please choose a different name.") # if a contact with the same name is found, print a message indicating that the contact already exists
+        return
+    
     contacts.append(contact) # add the new contact to the contacts list
     save_contacts(contacts) # save the updated contacts list to the file
 
