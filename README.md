@@ -17,9 +17,9 @@ is meant for basic information storing proccesses
 
 ## Sample
 Select option: 1
-Enter name: John
+Enter full name: John
 Enter phone number: 0789654125
-Enter email: ewrweoierw@outlook.com
+Enter email address: ewrweoierw@outlook.com
 
 Results: Contact Saved
 
