@@ -10,6 +10,8 @@ is meant for basic information storing proccesses
 - Input validation
 - Error handling as well
 - Contacts are saved into a a json file in order to create persistancy
+- File Handling
+- CRUD operations
 
 ## How to run
 - Python 3 should be installed
