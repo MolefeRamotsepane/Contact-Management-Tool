@@ -40,17 +40,18 @@ def add_contact(contacts):
     save_contacts(contacts) # save the updated contacts list to the file
 
 def view_contacts(contacts):
+    print("-----------------------------")
+    print("Contact Details:")
+    print("-----------------------------")
     if not contacts:
         print("No contacts found.") # if the contacts list is empty, print a message indicating that no contacts are found
         return
     
     for contact in contacts: # iterate(loop) through each contact in the contacts list
-        print("-----------------------------")
-        print("Contact Details:")
-        print("-----------------------------")
         print(f"Full Name: {contact['name']}") # print the name of the contact
         print(f"Phone Number: {contact['phone']}") # print the phone number of the contact
         print(f"Email Address: {contact['email']}") # print the email address of the contact
+        print("")
 
     
 def update_contact(contacts):
