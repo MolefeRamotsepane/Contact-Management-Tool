@@ -103,23 +103,27 @@ def main(): # main function that runs the program
         print("2. View Contacts")
         print("3. Search Contact")
         print("4. Delete Contact")
-        print("5. Exit")
+        print("5. Update Contact")
+        print("6. Exit")
 
-        choice = input("Choose an option (1-5): ")
+        choice = input("Choose an option (1-6): \n")
 
         if choice == "1": # if the user chooses option 1, call the add_contact function
             add_contact(contacts)
+            
         elif choice == "2": # if the user chooses option 2, call the view_contacts function
             view_contacts(contacts)
         elif choice == "3": # if the user chooses option 3, call the search_contacts function
             search_contacts(contacts)
         elif choice == "4": # if the user chooses option 4, call the delete_contact function
             delete_contact(contacts)
-        elif choice == "5": # if the user chooses option 5, break the loop and exit the program
+        elif choice == "5": # if the user chooses option 5, call the update_contact function
+            update_contact(contacts)
+        elif choice == "6": # if the user chooses option 5, break the loop and exit the program
             print("Exiting Pristine Contacts Manager. Goodbye!")
             break
         else: # if the user enters an invalid choice, print an error message
-            print("Invalid choice. Please choose a valid option (1-5).")
+            print("Invalid choice. Please choose a valid option (1-6).")
 
 if __name__ == "__main__": # if this script is run directly (not imported as a module), call the main function to start the program
     main()
